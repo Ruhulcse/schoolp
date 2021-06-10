@@ -1,0 +1,44 @@
+.container{
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 0;
+}
+.head{
+    color: white;
+    font-size: 867%;
+    font-weight: revert;
+}
+.welcome {
+    color:#3782a3;
+    font-size: 411%;
+}
+.description{
+    color: white;
+    font-size: 186%;
+    font-weight: 600;
+}
+.left{
+    width: 50%;
+    float:left;
+  }
+  .right{
+    width: 50%;
+    float:right;
+  }
+  .butt {
+    border: 1px outset blue;
+    background-color: white;
+    font-size: 160%;
+    padding: 2%;
+    font-weight: bold;
+}
+.rbutt {
+    border: 1px outset blue;
+    background-color: white;
+    font-size: 160%;
+    padding: 2%;
+    padding-left: 8%;
+    padding-right: 8%;
+    font-weight: bold;
+    margin-left: 22%;
+}
