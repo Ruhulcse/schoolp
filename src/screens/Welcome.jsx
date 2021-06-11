@@ -9,7 +9,18 @@ function Welcome() {
     let result = hour+minutes+seconds;
     result+=10*60;
     localStorage.setItem('endtime',result);
-
+    let check = localStorage.getItem('order')?true:false;
+    const movie = localStorage.getItem('moviename');
+    const firstperson = localStorage.getItem('one');
+    const secondperson = localStorage.getItem('two');
+    const thirdperson = localStorage.getItem('three');
+    const fourthperson = localStorage.getItem('four');
+    const fivthperson = localStorage.getItem('five');
+    const sixthperson = localStorage.getItem('six');
+    const soda = localStorage.getItem('soda');
+    const cola = localStorage.getItem('cola');
+    const nachos = localStorage.getItem('nachos');
+    const candy = localStorage.getItem('candy');
     const book = () =>{
         console.log('clicked')
         window.location.href = '/booking';
@@ -37,34 +48,26 @@ function Welcome() {
                 <br></br>
                 <br></br>
                 <br></br>
-                 <Timer/>
+                {!check&& <Timer/>}
                 </div>
               </div>
-            {/* {!check?(<div>
-                <br></br>
-                <br></br>
-                <br></br>
-                <br></br>
-                <br></br>
-                <br></br>
-                <br></br>
-                <Timer/>
-                </div>):(
-                <div>
-                 <h2 style={{ fontSize: "300%"}}>Privious booking on this site</h2>
-                <li style={{fontSize: "160%"}}>{movie}</li>
-                <li style={{fontSize: "160%"}}>Seats:
-                    <p style={{fontSize: "70%"}}>1. {firstperson}</p>
-                    <p style={{fontSize: "70%"}}>2. {secondperson}</p>
-                    <p style={{fontSize: "70%"}}>3. {thirdperson}</p>
-                    <p style={{fontSize: "70%"}}>4. {fourthperson}</p>
-                    <p style={{fontSize: "70%"}}>5. {fivthperson}</p>
-                    <p style={{fontSize: "70%"}}>6. {sixthperson}</p>
+            {check&&
+            <div style={{marginTop:"13%"}}>
+                <h2 style={{ fontSize: "300%", color: "white"}}>Privious booking on this site</h2>
+                <li style={{fontSize: "160%", color:"white"}}>{movie}</li>
+                <li style={{fontSize: "160%", color:"white"}}>Seats:
+                    <p style={{fontSize: "70%", color:"white"}}>1. {firstperson}</p>
+                    <p style={{fontSize: "70%", color:"white"}}>2. {secondperson}</p>
+                    <p style={{fontSize: "70%", color:"white"}}>3. {thirdperson}</p>
+                    <p style={{fontSize: "70%", color:"white"}}>4. {fourthperson}</p>
+                    <p style={{fontSize: "70%", color:"white"}}>5. {fivthperson}</p>
+                    <p style={{fontSize: "70%", color:"white"}}>6. {sixthperson}</p>
                 </li>
-                <li style={{fontSize: "160%"}}>Popcorn: {popcorn}</li>
-                <li style={{fontSize: "160%"}}>Number of Cola: {cola}</li>
-                </div>
-            )} */}
+                <li style={{fontSize: "160%" , color:"white"}}>Soda: {soda}</li>
+                <li style={{fontSize: "160%", color:"white"}}> Cola: {cola}</li>
+                <li style={{fontSize: "160%", color:"white"}}> Candy: {candy}</li>
+                <li style={{fontSize: "160%", color:"white"}}> Nachos: {nachos}</li>
+            </div>}
         </div>
     )
 }
