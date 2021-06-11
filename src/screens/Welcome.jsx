@@ -1,9 +1,21 @@
 import React from 'react'
 import "../Style.css"
+import Timer from './Timer';
 function Welcome() {
+    var today = new Date();
+    let hour = today.getHours()*60*60;
+    var minutes = today.getMinutes()*60;
+    var seconds = today.getSeconds();
+    let result = hour+minutes+seconds;
+    result+=10*60;
+    localStorage.setItem('endtime',result);
+
+    const book = () =>{
+        console.log('clicked')
+        window.location.href = '/booking';
+    }
     return (
         <div className="container">
-            <h1 style={{margin: "0"}}>.</h1>
             <h1 className="head">CINEWEST</h1>
             <h2 className="welcome">WELCOME ON CINEWEST</h2>
             <p className="description">
@@ -19,13 +31,13 @@ function Welcome() {
                 <br></br>
                 <br></br>
                 <br></br>
-                <button type="submit" className="butt" style={{color:"#064460"}}>BOOK TICKETS NOW</button>
+                <button type="submit" className="butt" style={{color:"#064460"}} onClick={book}>BOOK TICKETS NOW</button>
                  </div>
                 <div className="right"> 
                 <br></br>
                 <br></br>
                 <br></br>
-                 <button type="submit"className="rbutt" style={{color: "#3782a3"}} >10.00</button>
+                 <Timer/>
                 </div>
               </div>
             {/* {!check?(<div>

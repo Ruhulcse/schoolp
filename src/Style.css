@@ -7,6 +7,8 @@
     color: white;
     font-size: 867%;
     font-weight: revert;
+    padding-top: 8%;
+    margin: 0;
 }
 .welcome {
     color:#3782a3;
@@ -32,6 +34,13 @@
     padding: 2%;
     font-weight: bold;
 }
+.src{
+    border: 1px outset blue;
+    background-color: white;
+    font-size: 190%;
+    padding: 1%;
+    font-weight: bold;
+}
 .rbutt {
     border: 1px outset blue;
     background-color: white;
@@ -41,4 +50,13 @@
     padding-right: 8%;
     font-weight: bold;
     margin-left: 22%;
+}
+.find{
+    color: white;
+    font-size: 243%;
+    padding-right: 1%;
+}
+.searchbox{
+    font-size: 197%;
+    margin-right: 2%
 }
