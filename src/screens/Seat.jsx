@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, {useState } from 'react'
 import "../Style.css"
 import Timer from './Timer';
 function Seat() {

@@ -1,5 +1,4 @@
 import React from 'react'
-import Timer from './Timer';
 import "../Style.css"
 function summary() {
     const movie = localStorage.getItem('moviename');
